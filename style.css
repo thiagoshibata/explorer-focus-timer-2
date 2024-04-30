@@ -24,7 +24,7 @@ body {
 #app {
   display: flex;
   align-items: center;
-  gap: 19.2rem;
+  gap: 5rem;
 }
 
 #timer {
@@ -47,6 +47,14 @@ body {
   border: 0;
   font-size: 4.5rem;
   cursor: pointer;
+
+  border-radius: 50%;
+
+  transition: background-color 0.5s;
+}
+#controls button:hover {
+  color: var(--bg-button-hover);
+  font-weight: bold;
 }
 
 #sound-wrapper {
@@ -86,4 +94,9 @@ body {
 
 .flex {
   display: flex;
+}
+
+.running .ph-play-circle,
+html:not(.running) .ph-pause-circle {
+  display: none;
 }

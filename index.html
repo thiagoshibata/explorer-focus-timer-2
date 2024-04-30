@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
-    <script src="./js/main.js" defer></script>
+    <script type="module" src="./src/main.js" defer></script>
   </head>
   <body>
     <div id="app">
@@ -21,23 +21,34 @@
           <button class="ph ph-play-circle" data-action="toggleRunning">
             <span class="sr-only">iniciar contador</span>
           </button>
+          <button class="ph ph-pause-circle" data-action="toggleRunning">
+            <span class="sr-only">pausar contador</span>
+          </button>
           <button class="ph ph-stop-circle" data-action="reset">
             <span class="sr-only">parar contador</span>
           </button>
-          <button class="ph ph-plus-circle">
+          <button class="ph ph-plus-circle" data-action="advance">
             <span class="sr-only">avançar contador</span>
           </button>
-          <button class="ph ph-minus-circle">
+          <button class="ph ph-minus-circle" data-action="back">
             <span class="sr-only">retroceder contador</span>
           </button>
         </section>
       </div>
       <div id="sounds-container">
         <div id="sound-wrapper">
-          <button id="forest" class="ph ph-tree"></button>
-          <button id="rain" class="ph ph-cloud-snow"></button>
-          <button id="coffe-shop" class="ph ph-storefront"></button>
-          <button id="fire" class="ph ph-fire"></button>
+          <button class="ph ph-tree" data-action="playForest"></button>
+          <button
+            id="rain"
+            class="ph ph-cloud-snow"
+            data-action="playRain"
+          ></button>
+          <button
+            id="coffe-shop"
+            class="ph ph-storefront"
+            data-action="playCoffeShop"
+          ></button>
+          <button id="fire" class="ph ph-fire" data-action="playFire"></button>
         </div>
       </div>
     </div>
