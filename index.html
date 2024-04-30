@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Focus Timer 2 - Pomodoro</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <script src="./js/main.js" defer></script>
+  </head>
+  <body>
+    <div id="app">
+      <div id="timer-container">
+        <section id="timer" class="flex">
+          <span id="minutes">00</span>
+          <span>:</span>
+          <span id="seconds">00</span>
+        </section>
+        <section id="controls" class="flex">
+          <button class="ph ph-play-circle" data-action="toggleRunning">
+            <span class="sr-only">iniciar contador</span>
+          </button>
+          <button class="ph ph-stop-circle" data-action="reset">
+            <span class="sr-only">parar contador</span>
+          </button>
+          <button class="ph ph-plus-circle">
+            <span class="sr-only">avançar contador</span>
+          </button>
+          <button class="ph ph-minus-circle">
+            <span class="sr-only">retroceder contador</span>
+          </button>
+        </section>
+      </div>
+      <div id="sounds-container">
+        <div id="sound-wrapper">
+          <button id="forest" class="ph ph-tree"></button>
+          <button id="rain" class="ph ph-cloud-snow"></button>
+          <button id="coffe-shop" class="ph ph-storefront"></button>
+          <button id="fire" class="ph ph-fire"></button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
